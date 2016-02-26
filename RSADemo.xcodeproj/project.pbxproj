@@ -13,6 +13,8 @@
 		606B3DE11C8012DC0095523D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606B3DDF1C8012DC0095523D /* Main.storyboard */; };
 		606B3DE31C8012DC0095523D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 606B3DE21C8012DC0095523D /* Assets.xcassets */; };
 		606B3DE61C8012DC0095523D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606B3DE41C8012DC0095523D /* LaunchScreen.storyboard */; };
+		606B3DF81C8013BC0095523D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 606B3DF71C8013BC0095523D /* Security.framework */; };
+		606B3E001C802C890095523D /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 606B3DFF1C802C890095523D /* RSA.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		606B3DE21C8012DC0095523D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		606B3DE51C8012DC0095523D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		606B3DE71C8012DC0095523D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606B3DF71C8013BC0095523D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		606B3DFE1C802C890095523D /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		606B3DFF1C802C890095523D /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606B3DF81C8013BC0095523D /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +64,7 @@
 		606B3DD51C8012DC0095523D /* RSADemo */ = {
 			isa = PBXGroup;
 			children = (
+				606B3DFD1C802C890095523D /* RSA */,
 				606B3DD91C8012DC0095523D /* AppDelegate.h */,
 				606B3DDA1C8012DC0095523D /* AppDelegate.m */,
 				606B3DDC1C8012DC0095523D /* ViewController.h */,
@@ -74,9 +81,19 @@
 		606B3DD61C8012DC0095523D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				606B3DF71C8013BC0095523D /* Security.framework */,
 				606B3DD71C8012DC0095523D /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		606B3DFD1C802C890095523D /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				606B3DFE1C802C890095523D /* RSA.h */,
+				606B3DFF1C802C890095523D /* RSA.m */,
+			);
+			path = RSA;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +168,7 @@
 			files = (
 				606B3DDE1C8012DC0095523D /* ViewController.m in Sources */,
 				606B3DDB1C8012DC0095523D /* AppDelegate.m in Sources */,
+				606B3E001C802C890095523D /* RSA.m in Sources */,
 				606B3DD81C8012DC0095523D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RSADemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.xingcheng.demo.RSADemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RSADemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.xingcheng.demo.RSADemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
