@@ -1,7 +1,7 @@
-/*
- @author: ideawu
- @link: https://github.com/ideawu/Objective-C-RSA
- */
+//
+//  Created by 邢程.
+//  Copyright © 2016年 XingCheng. All rights reserved.
+//
 
 #import <Foundation/Foundation.h>
 
