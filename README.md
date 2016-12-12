@@ -2,7 +2,9 @@
 RSA encryption and decryption [RSA 加密解密]
 
 #使用前
-###首先，建议大家看完这段文字。可能节省你很多时间！
+
+## iOS10 注意事项
+iOS需要在项目中需要在Capabillties中打开钥匙串(Keychain Sharing)权限
 
 ## 如果你已经生成了公钥私钥
 首先看一下你的公钥格式（私钥同理）
@@ -52,7 +54,7 @@ Style2:
 #import "RSA.h"
 
 
- NSString* publicKey = @"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCytbb08iu+YqrqlDIlAG0QOBdY\nJfWVja/79CQrxi14j42ofrPhkBtrISC0/jLPYAr0cggOH2Ejk6ho8FLyVebWJV8f\nUItdYIGw+d5D/3b6g83aaeKRnGugAZuUzn0o7AW6niTitBwDrBnssp2pjvlT8soF\nAy/HuabWnXs8tVTvAwIDAQAB\n-----END PUBLIC KEY-----";
+    NSString* publicKey = @"-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCytbb08iu+YqrqlDIlAG0QOBdY\nJfWVja/79CQrxi14j42ofrPhkBtrISC0/jLPYAr0cggOH2Ejk6ho8FLyVebWJV8f\nUItdYIGw+d5D/3b6g83aaeKRnGugAZuUzn0o7AW6niTitBwDrBnssp2pjvlT8soF\nAy/HuabWnXs8tVTvAwIDAQAB\n-----END PUBLIC KEY-----";
     NSString*privateKey = @"-----BEGIN PRIVATE KEY-----\nMIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBALK1tvTyK75iquqU\nMiUAbRA4F1gl9ZWNr/v0JCvGLXiPjah+s+GQG2shILT+Ms9gCvRyCA4fYSOTqGjw\nUvJV5tYlXx9Qi11ggbD53kP/dvqDzdpp4pGca6ABm5TOfSjsBbqeJOK0HAOsGeyy\nnamO+VPyygUDL8e5ptadezy1VO8DAgMBAAECgYBZFAC1Sb0KMi5VrTbtgK/cZMkm\nFA281RpCcWhSNX9W199ZfIZ3SZiRJrsh3I9BFPOA8xIW0Adgb2qDnD8MMktT3pk4\nIiXKnhkFLPAEDAoMz+iXmC49Zjavv11rFQ5aWY+UwfkXmOhZiOdSk6X5vUJBO0uT\nw2SsQwG/2xjksr71oQJBAOwVeWV8pu9+lM6QsAIGKkqYRkg3sTdB0uQbgt3Qk+7S\n1+oHmVGPpeVtiPQ4Jw/WCREsuoMSh660fC67uKm8/TMCQQDByS0U+fCFD6eFWD5v\n0t/lqNgTvDbqhtyfomwm6IF19lBFdkZ2PgMQlv/nrPodDekHTWlahLZe9J5+wqbt\n1ybxAkEA2q9Noz+jVueXKf0GvOk/FZgWSmEkTD4x/tCpGZVS4v/1tzhQwidhEbO0\nEB1PubCW94zKPA3XF3LiMVv8Q2bn1wJAFgvtNRW6Z2kAhgskD1TOZDJxYs1m8gel\n0gOIimSpVeJP/5cVLR6g+qIzOwhS7DtI56vG8KVomiT6YzGCDE0OAQJAfC9aaBrd\n5GErEGGoJTWnTkxqWXRgKAhlrrlugPx9J77IwEhcVl1/FvHiVykM9p6tnLC4gR88\nhJBHDXw+R6o9tg==\n-----END PRIVATE KEY-----";
     
     NSString* content = @"hello world!";
@@ -61,3 +63,6 @@ Style2:
     NSString *decWithPrivKey = [RSA decryptString:encWithPubKey privateKey:privateKey];
     NSLog(@"decryptString:\n%@",decWithPrivKey);
 ```
+
+
+
